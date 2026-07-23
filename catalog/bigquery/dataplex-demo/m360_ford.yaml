@@ -1,0 +1,8 @@
+name: bigquery/dataplex-demo/m360_ford
+type: dataplex-types.global.bigquery-dataset
+resource:
+  name: projects/dataplex-demo/datasets/m360_ford
+  displayName: m360_ford
+  location: us
+  createTime: 2026-07-23T19:06:41.782Z
+  updateTime: 2026-07-23T19:06:41.782Z

@@ -1,0 +1,11 @@
+name: bigquery/dataplex-demo/m360_ford/qlscm_non_compliance_dp_vw
+type: dataplex-types.global.bigquery-table
+resource:
+  name: projects/dataplex-demo/datasets/m360_ford/tables/qlscm_non_compliance_dp_vw
+  displayName: qlscm_non_compliance_dp_vw
+  location: us
+  ancestors:
+    - name: projects/dataplex-demo/datasets/m360_ford
+      type: dataplex-types.global.bigquery-dataset
+  createTime: 2026-07-23T19:06:50.039Z
+  updateTime: 2026-07-23T19:06:50.039Z
