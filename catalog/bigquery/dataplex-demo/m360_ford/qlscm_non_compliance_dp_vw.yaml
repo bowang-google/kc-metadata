@@ -1,0 +1,93 @@
+name: bigquery/dataplex-demo/m360_ford/qlscm_non_compliance_dp_vw
+type: dataplex-types.global.bigquery-table
+resource:
+  name: projects/dataplex-demo/datasets/m360_ford/tables/qlscm_non_compliance_dp_vw
+  displayName: qlscm_non_compliance_dp_vw
+  location: us
+  ancestors:
+  - name: projects/dataplex-demo/datasets/m360_ford
+    type: dataplex-types.global.bigquery-dataset
+  createTime: 2026-07-23 19:06:50.039000+00:00
+  updateTime: 2026-07-23 19:06:50.039000+00:00
+aspects:
+  bigquery-table:
+    type: TABLE
+    tableType: TABLE
+  schema:
+    fields:
+    - name: non_compliance_dp_id
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: unit_id
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: vin
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: vin__msk
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: plant
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: created_on
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: modified_on
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: process_dts_utc
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: process_dts_local
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: root_cause_desc
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: station_desc
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: repair_code_desc
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: comp_type_desc
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: nc_code_desc
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: nc_location_code_desc
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: operation_desc
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: root_cause_name
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: repair_code_name
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+  storage:
+    service: BIGQUERY
+    resourceName: //bigquery.googleapis.com/projects/dataplex-demo/datasets/m360_ford/tables/qlscm_non_compliance_dp_vw
+category: supply-chain-management

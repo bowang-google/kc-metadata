@@ -1,1 +1,14 @@
-scope: bq-dataset.jasoneliu-joonix-test-project.m360_ford
+scope: bq-dataset.dataplex-demo.m360_ford
+snapshot:
+  entries:
+    - dataplex-types.global.bigquery-table
+  aspects:
+    - dataplex-types.global.schema
+    - dataplex-types.global.bigquery-table
+    - dataplex-types.global.storage
+    - dataplex-types.global.overview
+    - dataplex-types.global.queries
+publishing:
+  aspects:
+    - dataplex-types.global.overview
+    - dataplex-types.global.queries

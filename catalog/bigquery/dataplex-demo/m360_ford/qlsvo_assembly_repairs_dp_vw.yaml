@@ -1,0 +1,93 @@
+name: bigquery/dataplex-demo/m360_ford/qlsvo_assembly_repairs_dp_vw
+type: dataplex-types.global.bigquery-table
+resource:
+  name: projects/dataplex-demo/datasets/m360_ford/tables/qlsvo_assembly_repairs_dp_vw
+  displayName: qlsvo_assembly_repairs_dp_vw
+  location: us
+  ancestors:
+  - name: projects/dataplex-demo/datasets/m360_ford
+    type: dataplex-types.global.bigquery-dataset
+  createTime: 2026-07-23 19:06:50.595000+00:00
+  updateTime: 2026-07-23 19:06:50.595000+00:00
+aspects:
+  bigquery-table:
+    type: TABLE
+    tableType: TABLE
+  schema:
+    fields:
+    - name: assembly_repairs_dp_id
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: unit_id
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: vin
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: vin__msk
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: physical_vin
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: plant
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: plant_code
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: concern_id
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: unit_concern_id
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: unit_concern_state
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: repair_state
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: created_on
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: modified_on
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: unit_collection_pt_timestamp_utc
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: unit_repair_timestamp_utc
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: unit_collection_pt_timestamp_local
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: unit_repair_timestamp_local
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: plant_unit_location_name
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+  storage:
+    service: BIGQUERY
+    resourceName: //bigquery.googleapis.com/projects/dataplex-demo/datasets/m360_ford/tables/qlsvo_assembly_repairs_dp_vw
+category: vehicle-assembly

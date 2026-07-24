@@ -1,0 +1,93 @@
+name: bigquery/dataplex-demo/m360_ford/qlscm_scrapped_dp_vw
+type: dataplex-types.global.bigquery-table
+resource:
+  name: projects/dataplex-demo/datasets/m360_ford/tables/qlscm_scrapped_dp_vw
+  displayName: qlscm_scrapped_dp_vw
+  location: us
+  ancestors:
+  - name: projects/dataplex-demo/datasets/m360_ford
+    type: dataplex-types.global.bigquery-dataset
+  createTime: 2026-07-23 19:06:50.165000+00:00
+  updateTime: 2026-07-23 19:06:50.165000+00:00
+aspects:
+  bigquery-table:
+    type: TABLE
+    tableType: TABLE
+  schema:
+    fields:
+    - name: scrapped_dp_id
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: unit_id
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: vin
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: vin__msk
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: plant
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: operation_id
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: created_on
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: modified_on
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: quar_sakey
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: mfg_process_sakey
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: stn_group_sakey
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: trace_comp_sakey
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: create_dts_utc
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: scrap_dts_utc
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: update_dts_utc
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: create_dts_local
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: scrap_dts_local
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: update_dts_local
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+  storage:
+    service: BIGQUERY
+    resourceName: //bigquery.googleapis.com/projects/dataplex-demo/datasets/m360_ford/tables/qlscm_scrapped_dp_vw
+category: supply-chain-management

@@ -1,0 +1,93 @@
+name: bigquery/dataplex-demo/m360_ford/qlsvo_assembly_inspections_dp_vw
+type: dataplex-types.global.bigquery-table
+resource:
+  name: projects/dataplex-demo/datasets/m360_ford/tables/qlsvo_assembly_inspections_dp_vw
+  displayName: qlsvo_assembly_inspections_dp_vw
+  location: us
+  ancestors:
+  - name: projects/dataplex-demo/datasets/m360_ford
+    type: dataplex-types.global.bigquery-dataset
+  createTime: 2026-07-23 19:06:50.352000+00:00
+  updateTime: 2026-07-23 19:06:50.352000+00:00
+aspects:
+  bigquery-table:
+    type: TABLE
+    tableType: TABLE
+  schema:
+    fields:
+    - name: assembly_inspections_dp_id
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: unit_id
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: vin
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: vin__msk
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: physical_vin
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: plant
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: plant_code
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: model_year
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: unit_concern_id
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: created_on
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: modified_on
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: unit_collection_pt_timestamp_utc
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: unit_collection_pt_timestamp_local
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: plant_name
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: last_name
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: first_name
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: inspection_purpose_name
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+    - name: product_line_group_name
+      dataType: STRING
+      metadataType: STRING
+      mode: NULLABLE
+  storage:
+    service: BIGQUERY
+    resourceName: //bigquery.googleapis.com/projects/dataplex-demo/datasets/m360_ford/tables/qlsvo_assembly_inspections_dp_vw
+category: vehicle-assembly
