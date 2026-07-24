@@ -40,7 +40,7 @@ jobs:
         run: |
           git clone --depth 1 https://github.com/GoogleCloudPlatform/knowledge-catalog.git /tmp/knowledge-catalog
           cd /tmp/knowledge-catalog/toolbox/mdcode
-          npm install
+          NPM_CONFIG_USERCONFIG=/dev/null npm install
           npm run build
           echo "/tmp/knowledge-catalog/toolbox/mdcode/dist" >> $GITHUB_PATH
       # 6. Publish Metadata (runs dry-run by default when triggered manually, or live push if unchecked)
