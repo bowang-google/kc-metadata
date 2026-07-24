@@ -1,0 +1,56 @@
+name: Push Metadata to Knowledge Catalog (kcmd push)
+on:
+  # Allows triggering manually from the GitHub Actions tab with a dry-run toggle
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run kcmd push with --dry-run (no changes written to Dataplex)'
+        required: true
+        type: boolean
+        default: true
+# Required permissions for Workload Identity Federation
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  kcmd-push:
+    name: Push Metadata
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Check out the merged repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      # 2. Authenticate to Google Cloud via Workload Identity Federation
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT_EMAIL }}
+      # 3. Configure default project & compute region for kcmd
+      - name: Configure GCP Project and Region
+        run: |
+          gcloud config set project ${{ vars.GCP_PROJECT_ID }}
+          gcloud config set compute/region ${{ vars.GCP_REGION }}
+      # 4. Set up Node.js 20
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # 5. Clone upstream knowledge-catalog, install dependencies (including Bun via npm), and build kcmd
+      - name: Build and install kcmd
+        run: |
+          git clone --depth 1 https://github.com/GoogleCloudPlatform/knowledge-catalog.git /tmp/knowledge-catalog
+          cd /tmp/knowledge-catalog/toolbox/mdcode
+          npm install
+          npm run build
+          echo "/tmp/knowledge-catalog/toolbox/mdcode/dist" >> $GITHUB_PATH
+      # 6. Publish Metadata (runs dry-run by default when triggered manually, or live push if unchecked)
+      - name: Publish Metadata to Knowledge Catalog
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            echo "Running in dry-run mode..."
+            kcmd push --dry-run
+          else
+            echo "Running live kcmd push..."
+            kcmd push
+          fi
