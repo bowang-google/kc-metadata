@@ -1,0 +1,11 @@
+name: bigquery/jasoneliu-joonix-test-project/m360_ford/qlscm_non_compliance_dp_vw
+type: dataplex-types.global.bigquery-table
+resource:
+  name: projects/jasoneliu-joonix-test-project/datasets/m360_ford/tables/qlscm_non_compliance_dp_vw
+  displayName: qlscm_non_compliance_dp_vw
+  location: us
+  ancestors:
+    - name: projects/jasoneliu-joonix-test-project/datasets/m360_ford
+      type: dataplex-types.global.bigquery-dataset
+  createTime: 2026-07-24T18:28:21.958Z
+  updateTime: 2026-07-24T18:28:21.958Z

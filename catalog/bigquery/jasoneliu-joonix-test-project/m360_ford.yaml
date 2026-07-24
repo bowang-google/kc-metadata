@@ -1,0 +1,8 @@
+name: bigquery/jasoneliu-joonix-test-project/m360_ford
+type: dataplex-types.global.bigquery-dataset
+resource:
+  name: projects/jasoneliu-joonix-test-project/datasets/m360_ford
+  displayName: m360_ford
+  location: us
+  createTime: 2026-07-24T18:28:00.046Z
+  updateTime: 2026-07-24T18:28:00.046Z
