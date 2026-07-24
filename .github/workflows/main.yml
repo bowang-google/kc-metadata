@@ -30,11 +30,11 @@ jobs:
         run: |
           gcloud config set project ${{ vars.GCP_PROJECT_ID }}
           gcloud config set compute/region ${{ vars.GCP_REGION }}
-      # 4. Set up Node.js 20
+      # 4. Set up Node.js 22
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       # 5. Clone upstream knowledge-catalog, install dependencies (including Bun via npm), and build kcmd
       - name: Build and install kcmd
         run: |
