@@ -1,0 +1,1213 @@
+{
+  "agent_type": "table",
+  "user_input": "TOPIC: test github | DATASET: dataplex-demo.m360_ford",
+  "tool_uses": [
+    {
+      "name": "explore_repo",
+      "args": {
+        "component": "Dataplex Metadata Catalog"
+      }
+    },
+    {
+      "name": "get_file_contents",
+      "args": {
+        "repo": "kc-metadata",
+        "path": "/",
+        "owner": "bowang-google",
+        "ref": "main"
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "args": {
+        "path": "README.md",
+        "repo": "kc-metadata",
+        "owner": "bowang-google",
+        "ref": "main"
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "args": {
+        "ref": "main",
+        "repo": "kc-metadata",
+        "path": "catalog.yaml",
+        "owner": "bowang-google"
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "args": {
+        "path": "catalog",
+        "owner": "bowang-google",
+        "repo": "kc-metadata",
+        "ref": "main"
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "args": {
+        "path": "catalog/bigquery",
+        "owner": "bowang-google",
+        "ref": "main",
+        "repo": "kc-metadata"
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "args": {
+        "path": "catalog/bigquery/dataplex-demo",
+        "owner": "bowang-google",
+        "repo": "kc-metadata",
+        "ref": "main"
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "args": {
+        "owner": "bowang-google",
+        "path": "catalog/bigquery/dataplex-demo/m360_ford.yaml",
+        "repo": "kc-metadata",
+        "ref": "main"
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "args": {
+        "repo": "kc-metadata",
+        "owner": "bowang-google",
+        "ref": "main",
+        "path": "catalog/bigquery/dataplex-demo/m360_ford"
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "args": {
+        "ref": "main",
+        "repo": "kc-metadata",
+        "path": "catalog/bigquery/dataplex-demo/m360_ford/qlscm_non_compliance_dp_vw.yaml",
+        "owner": "bowang-google"
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_table_entry",
+      "args": {
+        "table": "qlscm_non_compliance_dp_vw"
+      }
+    },
+    {
+      "name": "get_table_entry",
+      "args": {
+        "table": "qlscm_quarantine_dp_vw"
+      }
+    },
+    {
+      "name": "get_table_entry",
+      "args": {
+        "table": "qlscm_scrapped_dp_vw"
+      }
+    },
+    {
+      "name": "get_table_entry",
+      "args": {
+        "table": "qlsvo_assembly_concerns_dp_vw"
+      }
+    },
+    {
+      "name": "get_table_entry",
+      "args": {
+        "table": "qlsvo_assembly_inspections_dp_vw"
+      }
+    },
+    {
+      "name": "get_table_entry",
+      "args": {
+        "table": "qlsvo_assembly_repairs_dp_vw"
+      }
+    },
+    {
+      "name": "route_docs",
+      "args": {
+        "table": "qlscm_non_compliance_dp_vw"
+      }
+    },
+    {
+      "name": "route_docs",
+      "args": {
+        "table": "qlscm_quarantine_dp_vw"
+      }
+    },
+    {
+      "name": "route_docs",
+      "args": {
+        "table": "qlscm_scrapped_dp_vw"
+      }
+    },
+    {
+      "name": "route_docs",
+      "args": {
+        "table": "qlsvo_assembly_concerns_dp_vw"
+      }
+    },
+    {
+      "name": "route_docs",
+      "args": {
+        "table": "qlsvo_assembly_inspections_dp_vw"
+      }
+    },
+    {
+      "name": "route_docs",
+      "args": {
+        "table": "qlsvo_assembly_repairs_dp_vw"
+      }
+    },
+    {
+      "name": "enumerate",
+      "args": {
+        "topic": "test github"
+      }
+    }
+  ],
+  "tool_responses": [
+    {
+      "name": "explore_repo",
+      "response": {
+        "url": "https://github.com/bowang-google/kc-metadata",
+        "name": "Dataplex Metadata Catalog",
+        "content": "# Dataplex Metadata Catalog\n\n**Source:** [bowang-google/kc-metadata: Dataplex Metadata Catalog](https://github.com/bowang-google/kc-metadata)\n\n## Identity\n- **Type:** source-code component (bowang-google/kc-metadata)\n- **Path:** `(repo root)`\n- **Languages:** yaml\n- **Purpose:** Defines metadata for Google Cloud data assets, specifically BigQuery datasets and tables, as code.\n\n## Key Entities\nscope: bq-dataset.dataplex-demo.m360_ford, dataplex-types.global.bigquery-dataset, dataplex-types.global.bigquery-table, projects/dataplex-demo/datasets/m360_ford, projects/dataplex-demo/datasets/m360_ford/tables/qlscm_non_compliance_dp_vw, projects/dataplex-demo/datasets/m360_ford/tables/qlscm_quarantine_dp_vw, projects/dataplex-demo/datasets/m360_ford/tables/qlscm_scrapped_dp_vw, projects/dataplex-demo/datasets/m360_ford/tables/qlsvo_assembly_concerns_dp_vw, projects/dataplex-demo/datasets/m360_ford/tables/qlsvo_assembly_inspections_dp_vw, projects/dataplex-demo/datasets/m360_ford/tables/qlsvo_assembly_repairs_dp_vw\n\n## Details\nThis repository implements a \"metadata as code\" strategy for a Dataplex instance. The `catalog.yaml` at the root defines the scope of the metadata. The `catalog` directory contains a hierarchical structure of YAML files that define BigQuery datasets and tables. Each YAML file contains properties like the resource name, display name, location, and type. For example, `catalog/bigquery/dataplex-demo/m360_ford.yaml` defines the `m360_ford` dataset, and the files within the `m360_ford` directory define the tables within that dataset.\n\n## Source Files Read\n- `README.md`\n- `catalog.yaml`\n- `catalog/bigquery/dataplex-demo/m360_ford.yaml`\n- `catalog/bigquery/dataplex-demo/m360_ford/qlscm_non_compliance_dp_vw.yaml`\n"
+      }
+    },
+    {
+      "name": "get_file_contents",
+      "response": {
+        "chars": 1678,
+        "ok": true
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "response": {
+        "chars": 313,
+        "ok": true
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "response": {
+        "chars": 321,
+        "ok": true
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "response": {
+        "chars": 491,
+        "ok": true
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "response": {
+        "chars": 538,
+        "ok": true
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "response": {
+        "chars": 1314,
+        "ok": true
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "response": {
+        "chars": 581,
+        "ok": true
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "response": {
+        "chars": 5256,
+        "ok": true
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_file_contents",
+      "response": {
+        "chars": 805,
+        "ok": true
+      },
+      "source": "github"
+    },
+    {
+      "name": "get_table_entry",
+      "response": {
+        "table": "qlscm_non_compliance_dp_vw",
+        "schema_fields": [
+          {
+            "name": "non_compliance_dp_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "vin",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "vin__msk",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "plant",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "created_on",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "modified_on",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "process_dts_utc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "process_dts_local",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "root_cause_desc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "station_desc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "repair_code_desc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "comp_type_desc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "nc_code_desc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "nc_location_code_desc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "operation_desc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "root_cause_name",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "repair_code_name",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_table_entry",
+      "response": {
+        "table": "qlscm_quarantine_dp_vw",
+        "schema_fields": [
+          {
+            "name": "quarantine_dp_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "vin",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "vin__msk",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "plant",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "operation_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "component_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_status_code",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "created_on",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "modified_on",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "mfg_process_sakey",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "quar_sakey",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "stn_group_sakey",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "trace_comp_sakey",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "update_dts_utc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "update_dts_local",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "status_desc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_type_desc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_table_entry",
+      "response": {
+        "table": "qlscm_scrapped_dp_vw",
+        "schema_fields": [
+          {
+            "name": "scrapped_dp_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "vin",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "vin__msk",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "plant",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "operation_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "created_on",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "modified_on",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "quar_sakey",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "mfg_process_sakey",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "stn_group_sakey",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "trace_comp_sakey",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "create_dts_utc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "scrap_dts_utc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "update_dts_utc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "create_dts_local",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "scrap_dts_local",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "update_dts_local",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_table_entry",
+      "response": {
+        "table": "qlsvo_assembly_concerns_dp_vw",
+        "schema_fields": [
+          {
+            "name": "unit_concern_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "vin",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "vin__msk",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "physical_vin",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "plant",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "plant_code",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "model_year",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "concern_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_concern_state",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "created_on",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "modified_on",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "assembly_concerns_dp_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "produced_date_utc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_collection_pt_timestamp_utc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "produced_date_local",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_collection_pt_timestamp_local",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "ii_causal_part_desc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_table_entry",
+      "response": {
+        "table": "qlsvo_assembly_inspections_dp_vw",
+        "schema_fields": [
+          {
+            "name": "assembly_inspections_dp_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "vin",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "vin__msk",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "physical_vin",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "plant",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "plant_code",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "model_year",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_concern_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "created_on",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "modified_on",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_collection_pt_timestamp_utc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_collection_pt_timestamp_local",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "plant_name",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "last_name",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "first_name",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "inspection_purpose_name",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "product_line_group_name",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_table_entry",
+      "response": {
+        "table": "qlsvo_assembly_repairs_dp_vw",
+        "schema_fields": [
+          {
+            "name": "assembly_repairs_dp_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "vin",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "vin__msk",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "physical_vin",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "plant",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "plant_code",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "concern_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_concern_id",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_concern_state",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "repair_state",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "created_on",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "modified_on",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_collection_pt_timestamp_utc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_repair_timestamp_utc",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_collection_pt_timestamp_local",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "unit_repair_timestamp_local",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          },
+          {
+            "name": "plant_unit_location_name",
+            "dataType": "STRING",
+            "metadataType": "STRING",
+            "mode": "NULLABLE",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "route_docs",
+      "response": {
+        "table": "qlscm_non_compliance_dp_vw",
+        "relevant_docs": [
+          {
+            "name": "Dataplex Metadata Catalog",
+            "url": "https://github.com/bowang-google/kc-metadata"
+          }
+        ]
+      }
+    },
+    {
+      "name": "route_docs",
+      "response": {
+        "table": "qlscm_quarantine_dp_vw",
+        "relevant_docs": [
+          {
+            "name": "Dataplex Metadata Catalog",
+            "url": "https://github.com/bowang-google/kc-metadata"
+          }
+        ]
+      }
+    },
+    {
+      "name": "route_docs",
+      "response": {
+        "table": "qlscm_scrapped_dp_vw",
+        "relevant_docs": [
+          {
+            "name": "Dataplex Metadata Catalog",
+            "url": "https://github.com/bowang-google/kc-metadata"
+          }
+        ]
+      }
+    },
+    {
+      "name": "route_docs",
+      "response": {
+        "table": "qlsvo_assembly_concerns_dp_vw",
+        "relevant_docs": [
+          {
+            "name": "Dataplex Metadata Catalog",
+            "url": "https://github.com/bowang-google/kc-metadata"
+          }
+        ]
+      }
+    },
+    {
+      "name": "route_docs",
+      "response": {
+        "table": "qlsvo_assembly_inspections_dp_vw",
+        "relevant_docs": [
+          {
+            "name": "Dataplex Metadata Catalog",
+            "url": "https://github.com/bowang-google/kc-metadata"
+          }
+        ]
+      }
+    },
+    {
+      "name": "route_docs",
+      "response": {
+        "table": "qlsvo_assembly_repairs_dp_vw",
+        "relevant_docs": [
+          {
+            "name": "Dataplex Metadata Catalog",
+            "url": "https://github.com/bowang-google/kc-metadata"
+          }
+        ]
+      }
+    },
+    {
+      "name": "enumerate",
+      "response": {
+        "categories": [
+          {
+            "id": "qlscm-supply-chain-data",
+            "title": "QLSCM Supply Chain Data",
+            "description": "Views related to supply chain management events like non-compliance, quarantine, and scrapped units.",
+            "entries": [
+              {
+                "id": "qlscm_non_compliance_dp_vw",
+                "display_name": "qlscm_non_compliance_dp_vw",
+                "aliases": [],
+                "description": "A view containing data on non-compliant units, including details like VIN, plant, and root cause description.",
+                "primary_source_urls": [],
+                "kind": "table"
+              },
+              {
+                "id": "qlscm_quarantine_dp_vw",
+                "display_name": "qlscm_quarantine_dp_vw",
+                "aliases": [],
+                "description": "A view of quarantined units, providing information on unit status, operation ID, and component ID.",
+                "primary_source_urls": [],
+                "kind": "table"
+              },
+              {
+                "id": "qlscm_scrapped_dp_vw",
+                "display_name": "qlscm_scrapped_dp_vw",
+                "aliases": [],
+                "description": "A view that lists scrapped units with details such as VIN, plant, and manufacturing process information.",
+                "primary_source_urls": [],
+                "kind": "table"
+              }
+            ]
+          },
+          {
+            "id": "qlsvo-assembly-data",
+            "title": "QLSVO Assembly Data",
+            "description": "Views focused on the vehicle assembly process, including records of concerns, inspections, and repairs.",
+            "entries": [
+              {
+                "id": "qlsvo_assembly_concerns_dp_vw",
+                "display_name": "qlsvo_assembly_concerns_dp_vw",
+                "aliases": [],
+                "description": "A view capturing concerns raised during the vehicle assembly process, with fields for unit concern state and model year.",
+                "primary_source_urls": [],
+                "kind": "table"
+              },
+              {
+                "id": "qlsvo_assembly_inspections_dp_vw",
+                "display_name": "qlsvo_assembly_inspections_dp_vw",
+                "aliases": [],
+                "description": "A view containing records of inspections performed during vehicle assembly, linked to unit concerns.",
+                "primary_source_urls": [],
+                "kind": "table"
+              },
+              {
+                "id": "qlsvo_assembly_repairs_dp_vw",
+                "display_name": "qlsvo_assembly_repairs_dp_vw",
+                "aliases": [],
+                "description": "A view that details repairs conducted during assembly, including information on the concern ID and repair state.",
+                "primary_source_urls": [],
+                "kind": "table"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "final_text": "# qlscm_non_compliance_dp_vw Overview\n\nThe `qlscm_non_compliance_dp_vw` is a BigQuery table in the `dataplex-demo.m360_ford` dataset, categorized under QLSCM Supply Chain Data. Its metadata is defined and managed as code within a GitHub repository, specifically as part of a Dataplex \"metadata as code\" strategy. This table captures various details related to non-compliance in the supply chain.\n\n## Key Columns\n\nThis table contains the following columns:\n\n*   `non_compliance_dp_id`: A unique identifier for the non-compliance data point.\n*   `unit_id`: An identifier for the unit involved.\n*   `vin`: The Vehicle Identification Number.\n*   `vin__msk`: A masked version of the Vehicle Identification Number.\n*   `plant`: The manufacturing plant where the event occurred.\n*   `created_on`: The date and time when the record was created.\n*   `modified_on`: The date and time when the record was last modified.\n*   `process_dts_utc`: The processing date and time in UTC.\n*   `process_dts_local`: The processing date and time in local time.\n*   `root_cause_desc`: A description of the root cause of the non-compliance.\n*   `station_desc`: A description of the station where the non-compliance was identified.\n*   `repair_code_desc`: A description of the repair code.\n*   `comp_type_desc`: A description of the component type.\n*   `nc_code_desc`: A description of the non-compliance code.\n*   `nc_location_code_desc`: A description of the non-compliance location code.\n*   `operation_desc`: A description of the operation involved.\n*   `root_cause_name`: The name associated with the root cause.\n*   `repair_code_name`: The name associated with the repair code.\n\n## Lineage\n\nThe metadata for this BigQuery table is defined as part of a \"metadata as code\" strategy implemented in the `bowang-google/kc-metadata` GitHub repository. Specifically, its definition can be found within the `catalog/bigquery/dataplex-demo/m360_ford/qlscm_non_compliance_dp_vw.yaml` file, which is part of a hierarchical structure defining BigQuery datasets and tables for a Dataplex instance.\n\n## Source References\n\n*   [Dataplex Metadata Catalog](https://github.com/bowang-google/kc-metadata)\n\n# qlscm_quarantine_dp_vw Overview\n\nThe `qlscm_quarantine_dp_vw` entry represents a BigQuery table within the `dataplex-demo.m360_ford` dataset, falling under the QLSCM Supply Chain Data category. Its metadata is managed through a \"metadata as code\" strategy, defined in a GitHub repository.\n\n## Metadata Management\n\nThis table's metadata is part of a \"metadata as code\" implementation for a Dataplex instance, residing in the `bowang-google/kc-metadata` GitHub repository. Within this repository, a hierarchical structure of YAML files in the `catalog` directory defines BigQuery datasets and tables. Specifically, the `qlscm_quarantine_dp_vw` table is identified as a key entity managed by this system, with its definition nested under the `m360_ford` dataset.\n\n## Schema\n\nThe `qlscm_quarantine_dp_vw` table contains the following columns:\n\n*   `quarantine_dp_id`: A string identifier for the quarantine data point.\n*   `unit_id`: A string identifier for the unit.\n*   `vin`: The Vehicle Identification Number as a string.\n*   `vin__msk`: A masked version of the Vehicle Identification Number as a string.\n*   `plant`: The plant where the unit was processed, as a string.\n*   `operation_id`: A string identifier for the operation.\n*   `component_id`: A string identifier for the component.\n*   `unit_status_code`: A string representing the status code of the unit.\n*   `created_on`: A string representing the creation timestamp.\n*   `modified_on`: A string representing the modification timestamp.\n*   `mfg_process_sakey`: A string representing the manufacturing process surrogate key.\n*   `quar_sakey`: A string representing the quarantine surrogate key.\n*   `stn_group_sakey`: A string representing the station group surrogate key.\n*   `trace_comp_sakey`: A string representing the traceable component surrogate key.\n*   `update_dts_utc`: A string representing the update timestamp in UTC.\n*   `update_dts_local`: A string representing the update timestamp in local time.\n*   `status_desc`: A string providing a description of the status.\n*   `unit_type_desc`: A string providing a description of the unit type.\n\n## Source References\n\n*   [Dataplex Metadata Catalog](https://github.com/bowang-google/kc-metadata)\n\n# qlscm_scrapped_dp_vw Overview\n\n`qlscm_scrapped_dp_vw` is a BigQuery table located at `dataplex-demo.m360_ford.qlscm_scrapped_dp_vw`. It belongs to the QLSCM Supply Chain Data category.\n\n## Schema\n\nThis table contains the following columns, all of which are nullable strings:\n\n*   `scrapped_dp_id`: A unique identifier for a scrapped data point.\n*   `unit_id`: Identifier for the unit.\n*   `vin`: Vehicle Identification Number.\n*   `vin__msk`: Masked Vehicle Identification Number, likely for privacy or security purposes.\n*   `plant`: The plant associated with the record.\n*   `operation_id`: Identifier for the operation.\n*   `created_on`: Date of creation.\n*   `modified_on`: Date of modification.\n*   `quar_sakey`: Surrogate key for quarantine information.\n*   `mfg_process_sakey`: Surrogate key for the manufacturing process.\n*   `stn_group_sakey`: Surrogate key for the station group.\n*   `trace_comp_sakey`: Surrogate key for trace components.\n*   `create_dts_utc`: Creation timestamp in UTC.\n*   `scrap_dts_utc`: Scrap timestamp in UTC.\n*   `update_dts_utc`: Update timestamp in UTC.\n*   `create_dts_local`: Creation timestamp in local time.\n*   `scrap_dts_local`: Scrap timestamp in local time.\n*   `update_dts_local`: Update timestamp in local time.\n\n## Lineage and Metadata Management\n\nThe metadata for `qlscm_scrapped_dp_vw` is managed as code within the `bowang-google/kc-metadata` GitHub repository. This repository implements a \"metadata as code\" strategy for a Dataplex instance, where definitions for Google Cloud data assets, including BigQuery datasets and tables, are stored as YAML files.\n\nSpecifically, the `catalog.yaml` file at the root of the repository defines the overall scope of the metadata. BigQuery datasets and tables, such as `qlscm_scrapped_dp_vw`, are defined within a hierarchical structure of YAML files in the `catalog` directory. For example, the `m360_ford` dataset is defined in `catalog/bigquery/dataplex-demo/m360_ford.yaml`, and tables within that dataset, like `qlscm_scrapped_dp_vw`, have their definitions in corresponding YAML files within the `m360_ford` directory. Each YAML file contains properties such as the resource name, display name, location, and type for the data asset it describes.\n\n## Source References\n\n*   [bowang-google/kc-metadata: Dataplex Metadata Catalog](https://github.com/bowang-google/kc-metadata)\n\n# qlsvo_assembly_concerns_dp_vw Overview\n\nThe `qlsvo_assembly_concerns_dp_vw` is a BigQuery table, specifically a view, located in the `dataplex-demo.m360_ford` dataset. It is designed to capture data related to assembly concerns, identified by various unit and concern identifiers, along with timestamps and causal part descriptions.\n\n## Metadata Management\n\nThe metadata for this table is managed using a \"metadata as code\" strategy within the `bowang-google/kc-metadata` GitHub repository. This repository defines metadata for Google Cloud data assets, including BigQuery datasets and tables, using YAML files. The table's definition is part of a hierarchical structure within the `catalog` directory, under `catalog/bigquery/dataplex-demo/m360_ford/`, where YAML files specify properties like resource name, display name, location, and type for tables within the `m360_ford` dataset.\n\n## Schema\n\nThe `qlsvo_assembly_concerns_dp_vw` table contains the following columns:\n\n*   `unit_concern_id`: STRING [NULLABLE]\n*   `unit_id`: STRING [NULLABLE]\n*   `vin`: STRING [NULLABLE]\n*   `vin__msk`: STRING [NULLABLE]\n*   `physical_vin`: STRING [NULLABLE]\n*   `plant`: STRING [NULLABLE]\n*   `plant_code`: STRING [NULLABLE]\n*   `model_year`: STRING [NULLABLE]\n*   `concern_id`: STRING [NULLABLE]\n*   `unit_concern_state`: STRING [NULLABLE]\n*   `created_on`: STRING [NULLABLE]\n*   `modified_on`: STRING [NULLABLE]\n*   `assembly_concerns_dp_id`: STRING [NULLABLE]\n*   `produced_date_utc`: STRING [NULLABLE]\n*   `unit_collection_pt_timestamp_utc`: STRING [NULLABLE]\n*   `produced_date_local`: STRING [NULLABLE]\n*   `unit_collection_pt_timestamp_local`: STRING [NULLABLE]\n*   `ii_causal_part_desc`: STRING [NULLABLE]\n\n## Source References\n\n*   [Dataplex Metadata Catalog](https://github.com/bowang-google/kc-metadata)\n\n# qlsvo_assembly_inspections_dp_vw Overview\n\nThis entry describes the `qlsvo_assembly_inspections_dp_vw` BigQuery table, which is part of the `dataplex-demo.m360_ford` dataset. Its metadata is defined and managed using a \"metadata as code\" strategy within a GitHub repository.\n\n## Key Features\n\nThe definition for `qlsvo_assembly_inspections_dp_vw` is sourced from the `bowang-google/kc-metadata` GitHub repository, which implements a metadata as code strategy for a Dataplex instance. This repository serves as a source-code component (`bowang-google/kc-metadata`) that defines metadata for Google Cloud data assets, including BigQuery datasets and tables. The `catalog` directory within this repository contains a hierarchical structure of YAML files, where `qlsvo_assembly_inspections_dp_vw` is defined as a table within the `m360_ford` dataset.\n\n## Schema\n\nThe `qlsvo_assembly_inspections_dp_vw` table contains the following columns:\n\n*   **assembly_inspections_dp_id** (STRING): A unique identifier for assembly inspections.\n*   **unit_id** (STRING): An identifier for the manufacturing unit.\n*   **vin** (STRING): The Vehicle Identification Number.\n*   **vin__msk** (STRING): A masked version of the Vehicle Identification Number.\n*   **physical_vin** (STRING): The physical Vehicle Identification Number.\n*   **plant** (STRING): The code for the manufacturing plant.\n*   **plant_code** (STRING): The code for the manufacturing plant.\n*   **model_year** (STRING): The model year of the vehicle.\n*   **unit_concern_id** (STRING): An identifier for a concern related to the unit.\n*   **created_on** (STRING): The timestamp indicating when the record was created.\n*   **modified_on** (STRING): The timestamp indicating when the record was last modified.\n*   **unit_collection_pt_timestamp_utc** (STRING): The timestamp in UTC when the unit was collected at a specific point.\n*   **unit_collection_pt_timestamp_local** (STRING): The timestamp in local time when the unit was collected at a specific point.\n*   **plant_name** (STRING): The name of the manufacturing plant.\n*   **last_name** (STRING): The last name associated with the inspection, potentially an inspector.\n*   **first_name** (STRING): The first name associated with the inspection, potentially an inspector.\n*   **inspection_purpose_name** (STRING): The name describing the purpose of the inspection.\n*   **product_line_group_name** (STRING): The name of the product line group.\n\n## Source References\n\n*   [Dataplex Metadata Catalog](https://github.com/bowang-google/kc-metadata)\n\n# qlsvo_assembly_repairs_dp_vw Overview\n\nThe `qlsvo_assembly_repairs_dp_vw` is a BigQuery table located at `dataplex-demo.m360_ford.qlsvo_assembly_repairs_dp_vw`. Its metadata, along with other Google Cloud data assets, is managed through a \"metadata as code\" strategy implemented in the `bowang-google/kc-metadata` GitHub repository. This repository defines BigQuery datasets and tables using a hierarchical structure of YAML files.\n\n## Source of Metadata\n\nThe definition for this BigQuery table, including its properties, is part of a \"metadata as code\" strategy. This approach uses the `bowang-google/kc-metadata` GitHub repository to store and manage metadata for a Dataplex instance. Specifically, the metadata for tables like `qlsvo_assembly_repairs_dp_vw` is defined in YAML files found within the `catalog` directory of this GitHub repository. This ensures that the metadata is version-controlled and can be managed alongside other source code.\n\n## Schema\n\nThe `qlsvo_assembly_repairs_dp_vw` table contains the following columns, providing details on assembly repairs:\n\n*   **assembly_repairs_dp_id**: A unique identifier for the assembly repair data point.\n*   **unit_id**: Identifier for the specific unit involved in the repair.\n*   **vin**: The Vehicle Identification Number.\n*   **vin__msk**: A masked version of the Vehicle Identification Number.\n*   **physical_vin**: The physical Vehicle Identification Number.\n*   **plant**: The manufacturing plant associated with the unit.\n*   **plant_code**: The code for the manufacturing plant.\n*   **concern_id**: An identifier for the concern leading to the repair.\n*   **unit_concern_id**: Identifier for the specific concern related to the unit.\n*   **unit_concern_state**: The current state of the unit's concern.\n*   **repair_state**: The current state of the repair.\n*   **created_on**: Timestamp indicating when the record was created.\n*   **modified_on**: Timestamp indicating when the record was last modified.\n*   **unit_collection_pt_timestamp_utc**: The timestamp (UTC) when the unit was collected at a certain point.\n*   **unit_repair_timestamp_utc**: The timestamp (UTC) when the unit repair occurred.\n*   **unit_collection_pt_timestamp_local**: The timestamp (local time) when the unit was collected at a certain point.\n*   **unit_repair_timestamp_local**: The timestamp (local time) when the unit repair occurred.\n*   **plant_unit_location_name**: The name of the unit's location within the plant.\n\n## Source References\n\n*   [Dataplex Metadata Catalog](https://github.com/bowang-google/kc-metadata)",
+  "token_usage": {
+    "input": 77470,
+    "output": 5604
+  },
+  "latency": 0.0
+}
